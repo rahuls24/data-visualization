@@ -65,7 +65,6 @@ function calculateMode(data: number[]): number | null {
 
 	let mode: number | null = null;
 	let maxCount = 1;
-
 	Object.keys(counts)
 		.map(Number)
 		.forEach(key => {
