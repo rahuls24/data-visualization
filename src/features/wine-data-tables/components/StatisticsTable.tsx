@@ -7,18 +7,6 @@ type StatisticsTableProps = {
 	statisticKey: string;
 };
 
-const TableRow: React.FC<{ label: string; values: (string | number)[] }> = ({
-	label,
-	values,
-}) => (
-	<tr>
-		<td>{label}</td>
-		{values.map((value, index) => (
-			<td key={index}>{value}</td>
-		))}
-	</tr>
-);
-
 const StatisticsTable: React.FC<StatisticsTableProps> = ({
 	data,
 	statisticKey,
@@ -52,7 +40,27 @@ const StatisticsTable: React.FC<StatisticsTableProps> = ({
 
 export default StatisticsTable;
 
+// Util components
+const TableRow: React.FC<{ label: string; values: (string | number)[] }> = ({
+	label,
+	values,
+}) => (
+	<tr>
+		<td>{label}</td>
+		{values.map((value, index) => (
+			<td key={index}>{value}</td>
+		))}
+	</tr>
+);
+
 // Util functions
+
+/**
+ * Returns a function that retrieves statistical values for a given measure name from a StatisticsData object.
+ *
+ * @param {StatisticsData} data - The StatisticsData object containing the statistical values.
+ * @returns {Function} A function that takes a measure name ('Mean', 'Median', or 'Mode') and returns an array of corresponding values.
+ */
 function getValueBydMeasure(data: StatisticsData) {
 	return (measureName: string) => {
 		return Object.keys(data)
