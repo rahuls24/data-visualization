@@ -1,4 +1,3 @@
-import './App.css';
 import WineDataTableView from './features/wine-data-tables/WineDataTableView';
 
 function App() {

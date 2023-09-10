@@ -15,31 +15,32 @@ The "Class" is determined by the "Alcohol" property.
 
 The data set used in this project can be found [here](https://drive.google.com/file/d/1td86FL0GyVYcKBUGY-8HX_wgeSDxWAsa/view).
 
-## How to Build/Run/Start the Project
+## How to Run the Project Locally
 
-Follow these steps to build, run, and start the project:
+To run the project locally, follow these steps:
 
 1. Clone the Repository
 
     ```
-    git clone https://github.com/your-username/wine-statistics.git
-    cd wine-statistics
+    git clone https://github.com/rahuls24/data-visualization.git
+    cd data-visualization
     ```
 
-2. Install Dependencies
+2. Install Dependencies using Yarn
 
     ```
-    npm install
+    yarn install
     ```
 
-3. Build and Run the Project
+3. Start the Project
 
     ```
-    npm run build
-    npm start
+    yarn start
     ```
 
     This will start the project and open it in your default web browser.
+
+...
 
 ## Screenshots
 
@@ -53,7 +54,7 @@ Follow these steps to build, run, and start the project:
 
 ## StackBlitz Demo
 
-You can also try out the project on StackBlitz by following this link: [StackBlitz Demo](https://stackblitz.com/github/rahuls24/wine-statistics)
+You can also try out the project on StackBlitz by following this link: [StackBlitz Demo](https://stackblitz.com/github/rahuls24/data-visualization)
 
 ## Dependencies
 
