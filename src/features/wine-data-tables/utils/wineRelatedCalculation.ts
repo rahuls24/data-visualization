@@ -1,5 +1,11 @@
 import { StatisticsData, WineEntry } from '../types/winesRelated';
 
+/**
+ * Normalizes wine data by grouping entries based on their alcohol content.
+ *
+ * @param {Array<WineEntry>} winesData - The array of wine entries.
+ * @returns {Record<number, Array<WineEntry>>} A record where keys are alcohol content and values are corresponding entries.
+ */
 function normalizedWinesDataByAlcohol(
 	winesData: Array<WineEntry>,
 ): Record<number, Array<WineEntry>> {
@@ -15,12 +21,24 @@ function normalizedWinesDataByAlcohol(
 	});
 	return normalizeWinesData;
 }
+
+/**
+ * Calculates the mean of a given set of numerical data.
+ *
+ * @param {number[]} data - The array of numerical values.
+ * @returns {number} The mean value.
+ */
 function calculateMean(data: number[]): number {
 	const sum = data.reduce((acc, val) => acc + val, 0);
 	return sum / data.length;
 }
 
-// Function to calculate median
+/**
+ * Calculates the median of a given set of numerical data.
+ *
+ * @param {number[]} data - The array of numerical values.
+ * @returns {number} The median value.
+ */
 function calculateMedian(data: number[]): number {
 	const sortedData = [...data].sort((a, b) => a - b);
 	const mid = Math.floor(sortedData.length / 2);
@@ -31,7 +49,13 @@ function calculateMedian(data: number[]): number {
 		return sortedData[mid];
 	}
 }
-// Function to calculate mode
+
+/**
+ * Calculates the mode of a given set of numerical data.
+ *
+ * @param {number[]} data - The array of numerical values.
+ * @returns {number | null} The mode value, or null if there is no mode.
+ */
 function calculateMode(data: number[]): number | null {
 	const counts: Record<number, number> = {};
 
@@ -54,6 +78,14 @@ function calculateMode(data: number[]): number | null {
 
 	return mode;
 }
+
+/**
+ * Calculates statistics for different alcohol classes based on a provided value calculator function.
+ *
+ * @param {Array<WineEntry>} winesData - The array of wine entries.
+ * @param {(data: WineEntry) => number} valueCalculator - A function to calculate a specific value from a WineEntry.
+ * @returns {StatisticsData} A record of statistics for different alcohol classes.
+ */
 export function calculateStatisticsByClass(
 	winesData: Array<WineEntry>,
 	valueCalculator: (data: WineEntry) => number,
