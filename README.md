@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+# Wine Statistics Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project provides tools to analyze wine data and calculate class-wise statistics for different attributes.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The project includes the following functionalities:
 
-### `npm start`
+1. Calculate class-wise mean, median, mode of "Flavanoids" attribute.
+2. Calculate class-wise mean, median, mode of a custom attribute "Gamma" (calculated as Gamma = (Ash \* Hue) / Magnesium).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The "Class" is determined by the "Alcohol" property.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Data Set
 
-### `npm test`
+The data set used in this project can be found [here](https://drive.google.com/file/d/1td86FL0GyVYcKBUGY-8HX_wgeSDxWAsa/view).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to Build/Run/Start the Project
 
-### `npm run build`
+Follow these steps to build, run, and start the project:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the Repository
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```
+    git clone https://github.com/your-username/wine-statistics.git
+    cd wine-statistics
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install Dependencies
 
-### `npm run eject`
+    ```
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Build and Run the Project
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```
+    npm run build
+    npm start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    This will start the project and open it in your default web browser.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Screenshots
 
-## Learn More
+### Statistics Table for "Flavanoids"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Flavanoids Statistics Table](screenshots/flavanoids-statistics.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Statistics Table for "Gamma"
+
+![Gamma Statistics Table](screenshots/gamma-statistics.png)
+
+## StackBlitz Demo
+
+You can also try out the project on StackBlitz by following this link: [StackBlitz Demo](https://stackblitz.com/github/your-username/wine-statistics)
+
+## Dependencies
+
+-   React
+-   TypeScript
