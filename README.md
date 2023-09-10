@@ -53,7 +53,7 @@ Follow these steps to build, run, and start the project:
 
 ## StackBlitz Demo
 
-You can also try out the project on StackBlitz by following this link: [StackBlitz Demo](https://stackblitz.com/github/your-username/wine-statistics)
+You can also try out the project on StackBlitz by following this link: [StackBlitz Demo](https://stackblitz.com/github/rahuls24/wine-statistics)
 
 ## Dependencies
 
