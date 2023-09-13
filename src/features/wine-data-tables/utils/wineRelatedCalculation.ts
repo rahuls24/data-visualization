@@ -64,14 +64,19 @@ function calculateMode(data: number[]): number | null {
 	});
 
 	let mode: number | null = null;
-	let maxCount = 1;
+	let maxCount: number | null = null;
 	Object.keys(counts)
 		.map(Number)
 		.forEach(key => {
 			const count = counts[key];
-			if (count > maxCount) {
+			if (maxCount === null) {
 				mode = key;
 				maxCount = count;
+			} else {
+				if (count > maxCount) {
+					mode = key;
+					maxCount = count;
+				}
 			}
 		});
 
